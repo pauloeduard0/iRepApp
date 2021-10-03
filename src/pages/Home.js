@@ -2,8 +2,13 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+
+import New from '../components/New';
 
 export default function Home(){
+    const navigation = useNavigation();
+
     return (
         <ScrollView
             showsVerticalScrollIndicator={false}
@@ -18,7 +23,33 @@ export default function Home(){
                     />
                 </View>
             </View>
-        
+
+            <View style={styles.contentNew}>
+                <Text style={styles.title}>Novidades</Text>
+            </View>
+
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ paddingHorizonal: 15 }}>
+                <New
+                    cover={require('../assets/casa-1.jpeg')}
+                    name="Rep Avenida"
+                    description="República da galera da medicina."
+                    onPress={() => navigation.navigate('detail')}
+                />
+                <New
+                    cover={require('../assets/casa-2.jpg')}
+                    name="Rep Barril"
+                    description="Rep da locurada, so a rapaziada firmeza."
+                    
+                    onPress={() => {}}
+                />
+                <New
+                    cover={require('../assets/casa-3.jpg')}
+                    name="Rep Arame"
+                    description="So a galera gente boa, tudo misto."
+                    onPress={() => {}}
+                />
+            </ScrollView>
+
         </ScrollView>
     );
 }
@@ -48,6 +79,17 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         fontSize: 13,
         width: '90%'
+    },
+    contentNew:{
+        flexDirection: 'row',
+        width: '100%',
+        alignItems: 'center'
+    },
+    title:{
+        paddingHorizontal: 15,
+        fontFamily: 'Montserrat_700Bold',
+        fontSize: 18,
+        color: '#4f4a4a'
     }
 
 });
