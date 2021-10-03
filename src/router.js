@@ -27,7 +27,7 @@ function Routes(){
                                 <Feather
                                     name="shopping-bag"
                                     size={24}
-                                    color='#black'
+                                    color="black"
                                 />
                             </TouchableOpacity>
                         )
@@ -37,7 +37,7 @@ function Routes(){
                     name="detail" 
                     component={Detail} 
                     options={{
-                        title:'DETALHE',
+                        title:'Detalhe',
                         headerTitleStyle:{
                             fontFamily:'Montserrat_700Bold',
                         },
@@ -47,7 +47,7 @@ function Routes(){
                                 <Feather
                                     name="shopping-bag"
                                     size={24}
-                                    color='#black'
+                                    color="black"
                                 />
                             </TouchableOpacity>
                         )
