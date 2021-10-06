@@ -44,6 +44,20 @@ export default function SwiperComponent() {
         />
        </View>
 
+       <View style={styles.slide}>
+        <Image
+        source={require('../assets/casa-1-banheiro.jpg')}
+        style={{ width: '100%', height: 400}}
+        />
+       </View>
+
+       <View style={styles.slide}>
+        <Image
+        source={require('../assets/casa-1-quarto_2.jpg')}
+        style={{ width: '100%', height: 400}}
+        />
+       </View>
+
    </Swiper>
   );
 }
