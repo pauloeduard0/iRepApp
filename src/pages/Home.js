@@ -5,6 +5,8 @@ import { Feather } from '@expo/vector-icons';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 
 import New from '../components/New';
+import House from '../components/House'
+import Recommended from '../components/Recommend';
 
 export default function Home(){
     const navigation = useNavigation();
@@ -30,9 +32,9 @@ export default function Home(){
 
             <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ paddingHorizonal: 15 }}>
                 <New
-                    cover={require('../assets/casa-1.jpeg')}
-                    name="Rep Avenida"
-                    description="República da galera da medicina."
+                    cover={require('../assets/casa-3.jpg')}
+                    name="Rep Tatu"
+                    description="República da galera da computação."
                     onPress={() => navigation.navigate('detail')}
                 />
                 <New
@@ -43,13 +45,50 @@ export default function Home(){
                     onPress={() => {}}
                 />
                 <New
-                    cover={require('../assets/casa-3.jpg')}
+                    cover={require('../assets/casa-1.jpeg')}
                     name="Rep Arame"
                     description="So a galera gente boa, tudo misto."
                     onPress={() => {}}
                 />
             </ScrollView>
 
+            <View style={{ flexDirection: 'row', marginBottom: 10, alignItems: 'center'}}>
+                <Text style={[styles.title, { marginTop: 20 }]}>Próximo de você</Text>
+            </View>
+
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ paddingHorizontal: 15 }}>
+                <House
+                cover={require('../assets/casa-4.jpg')}
+                />
+                <House
+                cover={require('../assets/casa-5.jpg')}
+                />
+                <House
+                cover={require('../assets/casa-6.jpg')}
+                />
+            </ScrollView>
+
+            <Text style={[styles.title, { marginTop: 20 }]}>
+                Descontos no primeiro mês:
+            </Text>
+
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ paddingHorizontal: 15 }}>
+                <Recommended
+                    cover={require('../assets/casa-3.jpg')}
+                    house='Rep Tatu'
+                    offer='20%'
+                />
+                <Recommended
+                    cover={require('../assets/casa-1.jpeg')}
+                    house='Rep TripLand'
+                    offer='10%'
+                />
+                <Recommended
+                    cover={require('../assets/casa-6.jpg')}
+                    house='Pensão da Judite'
+                    offer='5%'
+                />
+            </ScrollView>
         </ScrollView>
     );
 }
