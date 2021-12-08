@@ -5,7 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "test" : "jest"
   },
   "dependencies": {
     "@expo-google-fonts/montserrat": "^0.2.0",
@@ -33,8 +34,19 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "jest": "^27.4.3",
+    "jest-fetch-mock": "^3.0.3",
     "nodemon": "^2.0.14",
+    "react-native-testing-library": "^6.0.0",
+    "react-test-renderer": "^17.0.2",
     "sequelize-cli": "^6.2.0"
   },
-  "private": true
+  "private": true,
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ],
+    "automock": false
+  }
 }
