@@ -1,14 +1,17 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator} from '@react-navigation/native-stack';
 import { Feather } from '@expo/vector-icons';
 import {TouchableOpacity} from 'react-native';
 
 import Home from './pages/Home';
 import Detail from './pages/Detail';
+import Detail2 from './pages/Detail2';
+import Detail3 from './pages/Detail3';
 import Login from './pages/Login';
 import StudentRegistration from './pages/StudentRegistration';
 import RepRegistration from './pages/RepRegistration';
+import Bag from './pages/Bag';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,16 +27,6 @@ function Routes(){
                         headerTitleStyle:{
                             fontFamily:'Montserrat_700Bold',
                         },
-                           
-                        headerRight: () => (
-                            <TouchableOpacity style={{ marginRight: 15 }}>
-                                <Feather
-                                    name="shopping-bag"
-                                    size={24}
-                                    color="black"
-                                />
-                            </TouchableOpacity>
-                        )
                     }} 
                 />
                 <Stack.Screen
@@ -45,15 +38,6 @@ function Routes(){
                             fontFamily:'Montserrat_700Bold',
                         },
                            
-                        headerRight: () => (
-                            <TouchableOpacity style={{ marginRight: 15 }}>
-                                <Feather
-                                    name="shopping-bag"
-                                    size={24}
-                                    color="black"
-                                />
-                            </TouchableOpacity>
-                        )
                     }}
                 />
                 <Stack.Screen
@@ -64,16 +48,16 @@ function Routes(){
                         headerTitleStyle:{
                             fontFamily:'Montserrat_700Bold',
                         },
-                           
-                        headerRight: () => (
-                            <TouchableOpacity style={{ marginRight: 15 }}>
-                                <Feather
-                                    name="shopping-bag"
-                                    size={24}
-                                    color="black"
-                                />
-                            </TouchableOpacity>
-                        )
+                    }}  
+                />
+                <Stack.Screen
+                    name="mybag"
+                    component={Bag}
+                    options={{
+                        title:'Sacola',
+                        headerTitleStyle:{
+                            fontFamily:'Montserrat_700Bold',
+                        },
                     }}  
                 />
                 <Stack.Screen
@@ -91,6 +75,7 @@ function Routes(){
                                     name="shopping-bag"
                                     size={24}
                                     color="black"
+                                    
                                 />
                             </TouchableOpacity>
                         )
@@ -99,6 +84,46 @@ function Routes(){
                 <Stack.Screen
                     name="detail" 
                     component={Detail} 
+                    options={{
+                        title:'Detalhe',
+                        headerTitleStyle:{
+                            fontFamily:'Montserrat_700Bold',
+                        },
+                           
+                        headerRight: () => (
+                            <TouchableOpacity style={{ marginRight: 15 }}>
+                                <Feather
+                                    name="shopping-bag"
+                                    size={24}
+                                    color="black"
+                                />
+                            </TouchableOpacity>
+                        )
+                    }}
+                />
+                <Stack.Screen
+                    name="detail2" 
+                    component={Detail2} 
+                    options={{
+                        title:'Detalhe',
+                        headerTitleStyle:{
+                            fontFamily:'Montserrat_700Bold',
+                        },
+                           
+                        headerRight: () => (
+                            <TouchableOpacity style={{ marginRight: 15 }}>
+                                <Feather
+                                    name="shopping-bag"
+                                    size={24}
+                                    color="black"
+                                />
+                            </TouchableOpacity>
+                        )
+                    }}
+                />
+                <Stack.Screen
+                    name="detail3" 
+                    component={Detail3} 
                     options={{
                         title:'Detalhe',
                         headerTitleStyle:{
