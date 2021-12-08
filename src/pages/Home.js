@@ -41,14 +41,13 @@ export default function Home(){
                     cover={require('../assets/casa-2.jpg')}
                     name="Rep Barril"
                     description="Rep da locurada, so a rapaziada firmeza."
-                    
-                    onPress={() => {}}
+                    onPress={() => navigation.navigate('detail2')}
                 />
                 <New
                     cover={require('../assets/casa-1.jpeg')}
                     name="Rep Arame"
                     description="So a galera gente boa, tudo misto."
-                    onPress={() => {}}
+                    onPress={() => navigation.navigate('detail3')}
                 />
             </ScrollView>
 
