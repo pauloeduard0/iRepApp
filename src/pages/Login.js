@@ -3,6 +3,7 @@ import { View, KeyboardAvoidingView, Image, TextInput, TouchableOpacity, Text, S
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
+
 export default function Login(){
 
   const navigation = useNavigation();
@@ -11,6 +12,9 @@ export default function Login(){
   const [opacity] = useState(new Animated.Value(0));
   const [logo] = useState(new Animated.ValueXY({x: 180, y: 100}));
   const [input, setInput] = useState('');
+
+  const Example = () => {
+    const [keyboardStatus, setKeyboardStatus] = useState(undefined);
 
   useEffect(()=> {
 
@@ -169,4 +173,4 @@ const styles = StyleSheet.create({
     color: '#222'
   }
 });
-
+}
