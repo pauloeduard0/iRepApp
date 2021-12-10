@@ -13,9 +13,6 @@ export default function Login(){
   const [logo] = useState(new Animated.ValueXY({x: 180, y: 100}));
   const [input, setInput] = useState('');
 
-  const Example = () => {
-    const [keyboardStatus, setKeyboardStatus] = useState(undefined);
-
   useEffect(()=> {
 
     keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', keyboardDidShow);
@@ -173,4 +170,4 @@ const styles = StyleSheet.create({
     color: '#222'
   }
 });
-}
+
