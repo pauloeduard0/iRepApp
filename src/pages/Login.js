@@ -15,56 +15,19 @@ export default function Login(){
 
   useEffect(()=> {
 
-    keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', keyboardDidShow);
-    keyboardDidHidListener = Keyboard.addListener('keyboardDidHide', keyboardDidHide);
-
     Animated.parallel([
       Animated.spring(offset.y, {
         toValue:0,
         speed: 4,
         bounciness: 20,
-        useNativeDriver: true,
       }),
       Animated.timing(opacity, {
         toValue:1,
         duration: 200,
-        useNativeDriver: true,
       }),
     ]).start();
 
   },[]);
-
-  function keyboardDidShow(){
-    Animated.parallel([
-      Animated.timing(logo.x, {
-        toValue: 100,
-        duration: 100,
-        useNativeDriver: false
-      }),
-      Animated.timing(logo.y, {
-        toValue: 50,
-        duration: 100,
-        useNativeDriver: false
-      }),
-    ]).start();
-  }
-   
-
-  function keyboardDidHide(){
-
-    Animated.parallel([
-      Animated.timing(logo.x, {
-        toValue: 180,
-        duration: 100,
-        useNativeDriver: false
-      }),
-      Animated.timing(logo.y, {
-        toValue: 100,
-        duration: 100,
-        useNativeDriver: false
-      })
-    ]).start();
-  }
 
   return(
     <KeyboardAvoidingView style={styles.background}>
