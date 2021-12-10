@@ -11,7 +11,7 @@
    - [MySQL](#mysql)
 - [Executando Simulador](#executando-simulador-)
 - [Cypress](#cypress)
-- [ScreenShots](#Screenshots-)
+- [Screenshots](#screenshots-)
 
 
 ## O projeto 📈
@@ -30,6 +30,7 @@ Aplicação desenvolvida nas linguagens: <a href="https://www.javascript.com/">J
 - [NodeJS (link para download)](https://nodejs.org/en/) utilizado para back-end
 - [MySQL (link para download)](https://www.mysql.com/downloads/) usado para armazenar os dados
 - [Android Studio (link para download)](https://developer.android.com/studio?gclid=Cj0KCQiAqbyNBhC2ARIsALDwAsBHMwaRatvdLRI6d0-MyjHkxE-ta5HYnAitKmMpLSySTBc-RaIvhx4aAqyzEALw_wcB&gclsrc=aw.ds#downloads) uzado para emular
+- [Expo](https://expo.dev/) Também utilizado para emular
 
 ## Instalação ⚙💻
 
@@ -82,7 +83,7 @@ Para evitar muito processamento da máquina, é possível executar a simulação
 expo start --web
 ```
 
-## CYpress
+## Cypress
 <a href="https://www.cypress.io/">Cypress</a> é uma ferramenta poderosa de última geração desenvolvida especialmente para engenheiros de controle de qualidade (analistas QA) e desenvolvedores, que podem usá-la para os testes unitários<br>
 Para executá-lo basta abrir o terminal onde se encontra o projeto e digitar:
 ```
@@ -90,12 +91,15 @@ npx cypress open
 ```
 
 ## Screenshots 📷
+### Web:
 - Tela de login: <br>![image](https://user-images.githubusercontent.com/73140691/145647525-898189a9-af2c-453a-81c0-2b44a9b62614.png)
 - Tela de cadastro de aluno: <br>![image](https://user-images.githubusercontent.com/73140691/145647562-8b60b506-e1c2-463a-9fb5-ff77d1008632.png)
 - Tela de cadastro de república: <br>![image](https://user-images.githubusercontent.com/73140691/145647629-c49db64d-53e8-4ebf-af6c-475549e89f83.png)
 - Tela Home: <br> ![image](https://user-images.githubusercontent.com/73140691/145647675-f666bf1c-3299-4d65-8f08-42accc7b1505.png)
 
+### Mobile:
+- Tela de login: <br>![image](https://user-images.githubusercontent.com/73140691/145650896-d8364621-7e3c-47a3-a187-4a345a3f5af3.png)
+- Tela Home: <br> ![image](https://user-images.githubusercontent.com/73140691/145650932-a411741d-b873-4796-90c0-90b829fdd49b.png)
+- Tela república: <br>![image](https://user-images.githubusercontent.com/73140691/145650956-12546a0f-5728-468f-b513-b2a9d267fbff.png)
+
 <h1 align="center"> OBRIGADO </h1>
-
-
-
