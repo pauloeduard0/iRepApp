@@ -20,10 +20,12 @@ export default function Login(){
         toValue:0,
         speed: 4,
         bounciness: 20,
+        useNativeDriver: true,
       }),
       Animated.timing(opacity, {
         toValue:1,
         duration: 200,
+        useNativeDriver: true,
       }),
     ]).start();
 
