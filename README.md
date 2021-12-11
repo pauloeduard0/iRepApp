@@ -6,10 +6,12 @@
 - [Equipe](#equipe)
 - [Tecnologias](#tecnologias-)
 - [Instalação](#instalação-)
-   - [React Native e NODEJS](#react-native-e-nodejs)
+   - [React Native, NodeJS e Expo](#react-native-nodejs-expo)
    - [Android Studio](#android-studio)
    - [MySQL](#mysql)
-- [Arquivos](#arquivos-open_file_folder)
+- [Executando Simulador](#executando-simulador-)
+- [Cypress](#cypress)
+- [Screenshots](#screenshots-)
 
 
 ## O projeto 📈
@@ -28,26 +30,31 @@ Aplicação desenvolvida nas linguagens: <a href="https://www.javascript.com/">J
 - [NodeJS (link para download)](https://nodejs.org/en/) utilizado para back-end
 - [MySQL (link para download)](https://www.mysql.com/downloads/) usado para armazenar os dados
 - [Android Studio (link para download)](https://developer.android.com/studio?gclid=Cj0KCQiAqbyNBhC2ARIsALDwAsBHMwaRatvdLRI6d0-MyjHkxE-ta5HYnAitKmMpLSySTBc-RaIvhx4aAqyzEALw_wcB&gclsrc=aw.ds#downloads) uzado para emular
+- [Expo](https://expo.dev/) Também utilizado para emular
 
 ## Instalação ⚙💻
 
-### React Native e NODEJS
+### React Native NodeJS Expo
 "Para trabalhar com o React Native, você precisará compreender os fundamentos do JavaScript." Além de precisar instalar algumas dependências.
 Antes de tudo, abra um console com permissão de administrador no seu computador.
 Após aberto, siga os seguintes passos:
-- 1º Instalando o <a href="https://nodejs.org/en/">NODEJS</a>. Após a instalação, digite o código no prompt de comandos para verificar a instalação:
+- 1º IMPORTANTE‼️ Para baixar todas as dependências contidas no projeto e rodá-lo (pode demorar um pouco). Irá instalar também o Cypress: 
+```
+npm install
+```
+- 2º Instalando o <a href="https://nodejs.org/en/">NODEJS</a>. Após a instalação, digite o código no prompt de comandos para verificar a instalação:
 ```
 node -v
 ```
-- 2º Instalando o <a href="https://docs.expo.dev/">expo</a>:
+- 3º Instalando o <a href="https://docs.expo.dev/">expo</a>:
 ```
 npm install --global expo-cli
 ```
-- 3º Criando um novo projeto:
+- 4º Criando um novo projeto:
 ```
 expo init my-project
 ```
-- 4º Instalando NODE, Python2 e JDK</a>:
+- 5º Instalando NODE (caso não tenha instalado pelo primeiro passo), Python2 e JDK</a>:
 ```
 choco install -y nodejs.install openjdk8
 ```
@@ -69,3 +76,30 @@ expo start
 ### MySQL
 Para a instação do nosso bando de dados não há linhas de código, basta apenas seguir um tutorial simples <a href="https://www.youtube.com/watch?v=zpssr3u1EO8&t=320s&ab_channel=HostingerBrasil">aqui</a>
 
+## Executando simulador 🤖
+Para evitar muito processamento da máquina, é possível executar a simulação no próprio navegador: <br>
+- 1º: abra o terminal e digite
+```
+expo start --web
+```
+
+## Cypress
+<a href="https://www.cypress.io/">Cypress</a> é uma ferramenta poderosa de última geração desenvolvida especialmente para engenheiros de controle de qualidade (analistas QA) e desenvolvedores, que podem usá-la para os testes unitários<br>
+Para executá-lo basta abrir o terminal onde se encontra o projeto e digitar:
+```
+npx cypress open
+```
+
+## Screenshots 📷
+### Web:
+- Tela de login: <br>![image](https://user-images.githubusercontent.com/73140691/145647525-898189a9-af2c-453a-81c0-2b44a9b62614.png)
+- Tela de cadastro de aluno: <br>![image](https://user-images.githubusercontent.com/73140691/145647562-8b60b506-e1c2-463a-9fb5-ff77d1008632.png)
+- Tela de cadastro de república: <br>![image](https://user-images.githubusercontent.com/73140691/145647629-c49db64d-53e8-4ebf-af6c-475549e89f83.png)
+- Tela Home: <br> ![image](https://user-images.githubusercontent.com/73140691/145647675-f666bf1c-3299-4d65-8f08-42accc7b1505.png)
+
+### Mobile:
+- Tela de login: <br>![image](https://user-images.githubusercontent.com/73140691/145650896-d8364621-7e3c-47a3-a187-4a345a3f5af3.png)
+- Tela Home: <br> ![image](https://user-images.githubusercontent.com/73140691/145650932-a411741d-b873-4796-90c0-90b829fdd49b.png)
+- Tela república: <br>![image](https://user-images.githubusercontent.com/73140691/145650956-12546a0f-5728-468f-b513-b2a9d267fbff.png)
+
+<h1 align="center"> OBRIGADO </h1>
